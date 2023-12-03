@@ -84,8 +84,13 @@ def sum_gear_ratios(schematic):
     return total_ratio_sum
 
 
-with open("input") as f:
-    example_schematic = [line.strip() for line in f.readlines()]
+def main():
+    with open("input") as f:
+        schematic = [line.strip() for line in f.readlines()]
 
-print(sum_part_numbers(example_schematic))
-print(sum_gear_ratios(example_schematic))
+    print(sum_part_numbers(schematic))
+    print(sum_gear_ratios(schematic))
+
+
+if __name__ == "__main__":
+    main()
