@@ -1,3 +1,6 @@
+from math import prod
+
+
 def is_symbol(char):
     return not (char.isdigit() or char == ".")
 
@@ -79,7 +82,7 @@ def sum_gear_ratios(schematic):
                             break
 
                 if len(adjacent_parts) == 2:
-                    total_ratio_sum += eval("*".join(map(str, adjacent_parts)))
+                    total_ratio_sum += prod(adjacent_parts)
 
     return total_ratio_sum
 
